@@ -1,0 +1,65 @@
+extends base
+
+block content
+  main.main
+    h2.heading-secondary.ma-bt-lg.add-supplier-heading= title
+    form.form-inventory
+      .arrange
+        .form__group.ma-bt-md.form__group-add-supplier
+          label.add-supplier-label(for='inventoryType') Inventory Category: 
+          select#inventoryType.form__input.form__input-supplier-add(name="inventoryType") 
+            option(value='') Choose Inventory Type
+            option(value='hardware') Hardware
+            option(value='material-primarystock') Material / Primary Stock
+            option(value='special-material') Special Material
+        .form__group.ma-bt-md.form__group-add-supplier
+          <div class="form__group ma-bt-md form__group-add-supplier">
+          <label class="add-supplier-label" for="supplierID">Supplier ID:</label>
+          <input id="supplierID" class="form__input form__input-supplier-add" type="text" placeholder="Supplier ID" required>
+
+          <div id="supplierSuggestions" class="supplier-suggestions"></div>
+          </div>
+
+
+        .form__group.form__group-add-supplier
+          label.add-supplier-label(for='inventoryID') Inventory ID: 
+          input#inventoryID.form__input.form__input-supplier-add(type='text', placeholder='Material', required)
+        .form__group.form__group-add-supplier
+          label.add-supplier-label.itemType-label(for='itemType') Item Type: 
+          input.itemType-input.form__input.form__input-supplier-add(type='text', placeholder='Material', required)
+        .form__group.form__group-add-supplier
+          label.add-supplier-label(for='material') Name: 
+          input#material.form__input.form__input-supplier-add(type='text', placeholder='Inventory Name', required)
+        .form__group.ma-bt-md.form__group-add-supplier
+          label.add-supplier-label(for='thickness') Thickness(mm): 
+          input#thickness.form__input.form__input-supplier-add(type='text', placeholder='Thickness', required)
+        .form__group.ma-bt-md.form__group-add-supplier
+          label.add-supplier-label(for='length') Length(mm): 
+          input#length.form__input.form__input-supplier-add(type='text', placeholder='Length', required)
+        .form__group.ma-bt-md.form__group-add-supplier
+          label.add-supplier-label(for='width') Width(mm): 
+          input#width.form__input.form__input-supplier-add(type='text', placeholder='Width', required)
+        .form__group.ma-bt-md.form__group-add-supplier
+          label.add-supplier-label(for='referenceCode') Reference Code: 
+          input#referenceCode.form__input.form__input-supplier-add(type='text', placeholder='REF-00', required)
+        .form__group.ma-bt-md.form__group-add-supplier
+          label.add-supplier-label(for='quantity') Quantity: 
+          input#quantity.form__input.form__input-supplier-add(type='text', placeholder='Quantity', required)
+        .form__group.ma-bt-md.form__group-add-supplier
+          label.add-supplier-label(for='finish') Finish: 
+          input#finish.form__input.form__input-supplier-add(type='text', placeholder='Finish', required)
+        .form__group.ma-bt-md.form__group-add-supplier
+          label.add-supplier-label(for='grain') Grain: 
+          select#grain.form__input.form__input-supplier-add(name="grain") 
+            option(value=undefined) None
+            option(value='length') Length
+            option(value='width') Width
+            option(value='custom') Custom
+        .form__group.ma-bt-md.form__group-add-supplier
+          label.add-supplier-label(for='leadTime') Lead Time: 
+          input#leadTime.form__input.form__input-supplier-add(type='text', placeholder='Time', required)
+        .form__group.ma-bt-md.form__group-add-supplier
+          label.add-supplier-label(for='note') Note:
+          textarea#note.form__input.form__input-supplier-add(rows="4" cols="80" name="note" placeholder="Enter Note here") 
+        .form__group.form__group-add-supplier
+          button.btn.btn--green Add Inventory

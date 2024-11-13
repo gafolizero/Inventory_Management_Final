@@ -1,0 +1,41 @@
+//- extend base
+
+//- block content 
+//-   main 
+//-     h2.add-supplier-heading All the Inventory
+//-     h2 Filter 
+//-     form.filter-form.all-inventory-filter
+//-       .filter-box-container
+//-         .filter-box
+//-           label.filer-label Material 
+//-           input.filter-input#materialFilter(type="text")
+//-         .filter-box
+//-           label.filer-label Supplier 
+//-           input.filter-input#supplierFilter(type="text")
+//-         .filter-box
+//-           label.filer-label Thickness 
+//-           input.filter-input#thicknessFilter(type="text")
+//-         .filter-box
+//-           button.btn.btn--green.btn-filter Filter
+//-     table
+//-       thead
+//-         tr.tr-head
+//-           th Material
+//-           th Supplier
+//-           th Thickness
+//-           th Quantity
+//-           th Length
+//-           th Width
+//-           th Finish
+//-           th Grain
+//-       tbody
+//-         each inventory in allInventory
+//-           tr(onclick=`location.href='http://127.0.0.1:8000/inventory/${inventory.id}'`)
+//-             td= inventory.material
+//-             td=inventory.supplier[0].supplierName
+//-             td= inventory.thickness
+//-             td= inventory.quantity
+//-             td= inventory.length
+//-             td= inventory.width
+//-             td= inventory.finish
+//-             td= inventory.grain

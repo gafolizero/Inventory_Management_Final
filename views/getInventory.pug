@@ -1,0 +1,65 @@
+extend base
+
+block content 
+  main
+    .flex-container-supplier
+      .supplier-info-container.flex-supplier-container
+        h2.add-supplier-info-heading Inventory Details
+        .inventory-detail
+          p
+            <span class='supp-info'>Inventory ID </span> <span class='forID'>#{inventory.inventoryID || 'No ID Available'} </span>
+          p
+            <span class='supp-info'> Material </span> #{inventory.material || 'No Material Available'}
+          p
+            <span class='supp-info'> Supplier </span> #{inventory.supplier && inventory.supplier.length > 0 ? inventory.supplier[0].supplierName : 'No Supplier Available'}
+          p
+            <span class='supp-info'> Added By </span> #{inventory.addedBy && inventory.addedBy.length > 0 ? inventory.addedBy[0].name : 'No User Available'}
+          p
+            <span class='supp-info'> Thickness </span> #{inventory.thickness || 'No Thickness Available'}
+          p
+            <span class='supp-info'> Quantity </span> #{inventory.quantity || 'No Quantity Available'}
+          p
+            <span class='supp-info'> Length </span> #{inventory.length || 'No Length Available'}
+          p
+            <span class='supp-info'> Width </span> #{inventory.width || 'No Width Available'}
+          p
+            <span class='supp-info'> Finish </span> #{inventory.finish || 'No Finish Available'}
+          p
+            <span class='supp-info'> Grain </span> #{inventory.grain || 'No Grain Available'}
+          p
+            <span class='supp-info'> Inventory Type </span> #{inventory.inventoryType || 'No Inventory Type Available'}
+          form.form-delete-inventory
+            label.add-inventory-patch-label(for='inventoryDeleteId') Inventory ID
+            input#inventoryDeleteId.form__input(required, placeholder='Enter Inventory ID to Confirm Deletion')
+            button.btn.btn--small.btn-inventory-delete.delete-btn Delete
+
+      .supplier-inventory-info-container.flex-supplier-container
+        h2 Edit Inventory
+        form.form-inventory-patch
+          .arrange
+            .form__group.form__group-add-supplier
+              label.add-inventory-patch-label(for='materialPatch') Material: 
+              input#materialPatch.form__input.form__input-inventory-patch(type='text', value=`${inventory.material || ''}`)
+            .form__group.ma-bt-md.form__group-add-supplier
+              label.add-inventory-patch-label(for='supplieridPatch') Supplier ID: 
+              input#supplieridPatch.form__input.form__input-inventory-patch(type='text', value=`${inventory.supplier && inventory.supplier.length > 0 ? inventory.supplier[0].supplierID : ''}`)
+            .form__group.ma-bt-md.form__group-add-supplier
+              label.add-inventory-patch-label(for='thicknessPatch') Thickness: 
+              input#thicknessPatch.form__input.form__input-inventory-patch(type='number', value=`${inventory.thickness || ''}`)
+            .form__group.ma-bt-md.form__group-add-supplier
+              label.add-inventory-patch-label(for='quantityPatch') Quantity: 
+              input#quantityPatch.form__input.form__input-inventory-patch(type='number', value=`${inventory.quantity || ''}`)
+            .form__group.ma-bt-md.form__group-add-supplier
+              label.add-inventory-patch-label(for='lengthPatch') Length: 
+              input#lengthPatch.form__input.form__input-inventory-patch(type='number', value=`${inventory.length || ''}`)
+            .form__group.ma-bt-md.form__group-add-supplier
+              label.add-inventory-patch-label(for='widthPatch') Width: 
+              input#widthPatch.form__input.form__input-inventory-patch(type='number', value=`${inventory.width || ''}`)
+            .form__group.ma-bt-md.form__group-add-supplier
+              label.add-inventory-patch-label(for='finishPatch') Finish: 
+              input#finishPatch.form__input.form__input-inventory-patch(type='text', value=`${inventory.finish || ''}`)
+            .form__group.ma-bt-md.form__group-add-supplier
+              label.add-inventory-patch-label(for='grainPatch') Grain: 
+              input#grainPatch.form__input.form__input-inventory-patch(type='text', value=`${inventory.grain || ''}`)
+            .form__group.form__group-add-supplier
+              button.btn.btn--green Update

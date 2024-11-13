@@ -1,0 +1,167 @@
+[
+  {
+    "material": "Wood",
+    "supplier": "66ef942f4dfb735c59c1ec99",
+    "addedBy": "66e976122bbcfede6ccbb283",
+    "thickness": 10,
+    "quantity": 50,
+    "length": 200,
+    "width": 100,
+    "finish": 1,
+    "grain": 2
+  },
+  {
+    "material": "Metal",
+    "supplier": "66ef942f4dfb735c59c1ec99",
+    "addedBy": "66e976122bbcfede6ccbb283",
+    "thickness": 5,
+    "quantity": 100,
+    "length": 300,
+    "width": 150,
+    "finish": 2,
+    "grain": 1
+  },
+  {
+    "material": "Wood",
+    "supplier": "66ef942f4dfb735c59c1ec99",
+    "addedBy": "66e976122bbcfede6ccbb283",
+    "thickness": 12,
+    "quantity": 75,
+    "length": 250,
+    "width": 120,
+    "finish": 1,
+    "grain": 3
+  },
+  {
+    "material": "Metal",
+    "supplier": "66ef942f4dfb735c59c1ec9c",
+    "addedBy": "66e976122bbcfede6ccbb283",
+    "thickness": 8,
+    "quantity": 60,
+    "length": 220,
+    "width": 110,
+    "finish": 2,
+    "grain": 2
+  },
+  {
+    "material": "Wood",
+    "supplier": "66ef942f4dfb735c59c1ec9c",
+    "addedBy": "66e975e32bbcfede6ccbb27f",
+    "thickness": 15,
+    "quantity": 30,
+    "length": 150,
+    "width": 75,
+    "finish": 1,
+    "grain": 4
+  },
+  {
+    "material": "Metal",
+    "supplier": "66ef942f4dfb735c59c1ec9d",
+    "addedBy": "66e975e32bbcfede6ccbb27f",
+    "thickness": 7,
+    "quantity": 90,
+    "length": 260,
+    "width": 130,
+    "finish": 2,
+    "grain": 2
+  },
+  {
+    "material": "Wood",
+    "supplier": "66ef942f4dfb735c59c1ec9d",
+    "addedBy": "66e975e32bbcfede6ccbb27f",
+    "thickness": 20,
+    "quantity": 25,
+    "length": 300,
+    "width": 150,
+    "finish": 1,
+    "grain": 3
+  },
+  {
+    "material": "Metal",
+    "supplier": "66ef942f4dfb735c59c1ec9b",
+    "addedBy": "66e975e32bbcfede6ccbb27f",
+    "thickness": 6,
+    "quantity": 80,
+    "length": 180,
+    "width": 100,
+    "finish": 2,
+    "grain": 1
+  },
+  {
+    "material": "Wood",
+    "supplier": "66ef942f4dfb735c59c1ec9b",
+    "addedBy": "66e976082bbcfede6ccbb281",
+    "thickness": 10,
+    "quantity": 40,
+    "length": 200,
+    "width": 100,
+    "finish": 1,
+    "grain": 2
+  },
+  {
+    "material": "Metal",
+    "supplier": "66ef942f4dfb735c59c1ec9a",
+    "addedBy": "66e976082bbcfede6ccbb281",
+    "thickness": 9,
+    "quantity": 70,
+    "length": 240,
+    "width": 120,
+    "finish": 2,
+    "grain": 3
+  },
+  {
+    "material": "Wood",
+    "supplier": "66ef942f4dfb735c59c1ec9a",
+    "addedBy": "66e976082bbcfede6ccbb281",
+    "thickness": 8,
+    "quantity": 55,
+    "length": 210,
+    "width": 110,
+    "finish": 1,
+    "grain": 1
+  },
+  {
+    "material": "Metal",
+    "supplier": "66ef9565de5c3147cd71f014",
+    "addedBy": "66e976082bbcfede6ccbb281",
+    "thickness": 11,
+    "quantity": 45,
+    "length": 230,
+    "width": 140,
+    "finish": 2,
+    "grain": 3
+  },
+  {
+    "material": "Wood",
+    "supplier": "66ef9565de5c3147cd71f014",
+    "addedBy": "66e976082bbcfede6ccbb281",
+    "thickness": 14,
+    "quantity": 35,
+    "length": 160,
+    "width": 85,
+    "finish": 1,
+    "grain": 4
+  },
+  {
+    "material": "Metal",
+    "supplier": "66ef95abde5c3147cd71f01b",
+    "addedBy": "66e976122bbcfede6ccbb283",
+    "thickness": 4,
+    "quantity": 120,
+    "length": 270,
+    "width": 125,
+    "finish": 2,
+    "grain": 1
+  },
+  {
+    "material": "Wood",
+    "supplier": "66ef95abde5c3147cd71f01b",
+    "addedBy": "66e976122bbcfede6ccbb283",
+    "thickness": 13,
+    "quantity": 20,
+    "length": 190,
+    "width": 95,
+    "finish": 1,
+    "grain": 2
+  }
+]

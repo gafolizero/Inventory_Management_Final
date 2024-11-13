@@ -1,0 +1,53 @@
+extends base
+
+mixin navItem(link, text, icon, active)
+  li(class=`${active ? 'side-nav--active' : ''}`)
+    a(href=`${link}`)
+      use(xlink:href=`img/icons.svg#icon-${icon}`)
+      | #{text}
+
+block content
+  main.main
+    .user-view
+      nav.user-view__menu
+        ul.side-nav
+          +navItem('#', 'Settings', 'settings', true)
+          +navItem('/project/getAllProject', 'Project', 'credit-card')
+          li
+            a.nav__el--logout(href="#") Logout
+
+        - if(user.role === 'admin')
+          .admin-nav
+            h5.admin-nav__heading Admin
+            ul.side-nav
+              +navItem('/user', 'Manage Users', 'users')
+              +navItem('/signup', 'Sign Up user ', 'star')
+              +navItem('#', 'Feature', 'briefcase')
+
+      .user-view__content
+        .user-view__form-container
+          h2.heading-secondary.ma-bt-md Your account settings
+          form.form.form-user-data.form-user-data-updateMe
+            .form__group.form__group-add-supplier
+              label.add-supplier-label(for='name') Name
+              input#nameUpdateMe.form__input.form__input-supplier-add(type='text', value=`${user.name}`, required, name='name')
+            .form__group.ma-bt-md
+              label.form__label.add-supplier-label(for='email') Email address
+              input#emailUpdateMe.form__input.form__input-supplier-add(type='email', value=`${user.email}`, required, name='email')
+            .form__group.form__group-add-supplier
+              button.btn.btn--small.btn--green Save settings
+        
+        .user-view__form-container
+          h2.heading-secondary.ma-bt-md Password change
+          form.form.form-user-password.form-user-data-password
+            .form__group.form__group-add-supplier
+              label.add-supplier-label.form__label(for='password-current') Current password
+              input#password-current.form__input.form__input-supplier-add(type='password', placeholder='••••••••', required, minlength='8')
+            .form__group
+              label.add-supplier-label.form__label(for='password') New password
+              input#password.form__input-supplier-add.form__input(type='password', placeholder='••••••••', required, minlength='8')
+            .form__group.ma-bt-lg
+              label.add-supplier-label.form__label(for='password-confirm') Confirm password
+              input#password-confirm.form__input-supplier-add.form__input(type='password', placeholder='••••••••', required, minlength='8')
+            .form__group.right
+              button.btn.btn--small.btn--green.btn--save-password Save password

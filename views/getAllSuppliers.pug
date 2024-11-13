@@ -1,0 +1,50 @@
+extend base
+
+block content 
+  main 
+    h2.add-supplier-heading Supplier List
+    table.table-for-history-supp.supplier-table
+      thead.tr-head-getAll
+        tr.tr-head
+          th S.No
+          th Supplier ID
+          th Supplier Name
+          th Contact Number
+          th Address
+          th Added On
+          th History
+          th Details          
+      tbody
+        each supplier,i in allSuppliers 
+          tr
+            td= `${i+1}`
+            td.supplier-id= supplier.supplierID
+            td= supplier.supplierName
+            td= supplier.contactNumber
+            td= supplier.address
+            - const formattedDate=new Date(supplier.addedOn).toDateString()
+            td= formattedDate
+            td <button class='btn btn--green btn-checkHistory'> Check History </button>
+            td
+              button.btn.btn--green(onclick=`location.href='http://127.0.0.1:8000/supplier/${supplier.slug}'`) Details
+          tr.hide__content 
+            td.check-history-in-table(colspan="8")
+              .div-history
+                section
+                  h3.history-title History
+                  table.history 
+                    thead
+                      tr.tr-head
+                        th Date
+                        th Modified
+                        th Action Taken
+                        th Modified Item
+                        th Modified Item ID
+                        th Unload Quantity
+                        th Modified By
+
+                    tbody.history-inv-body
+
+    
+
+

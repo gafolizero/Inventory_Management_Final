@@ -1,0 +1,45 @@
+extends base
+
+block content
+  main.main
+    h2.heading-secondary.ma-bt-lg.add-supplier-heading=title
+    form.form-user-signup
+      .arrange
+        .form__group.form__group-add-supplier
+          label.add-supplier-label(for='name') Employee Name: 
+          input#newName.form__input.form__input-supplier-add(type='text', placeholder='New User Name', required)
+        .form__group.ma-bt-md.form__group-add-supplier
+          label.add-supplier-label(for='email') Email: 
+          input#newEmail.form__input.form__input-supplier-add(type='text', placeholder='Email', required)
+        .form__group.ma-bt-md.form__group-add-supplier
+          label.add-supplier-label(for='employeeID') Employee ID: 
+          input#newemployeeID.form__input.form__input-supplier-add(type='text', placeholder='EMP-0000', required)
+        .form__group.ma-bt-md.form__group-add-supplier
+          label.add-supplier-label(for='employeeType') Employee Type: 
+          select#newemployeeType.form__input.form__input-supplier-add(name="inventoryType") 
+            option(value='') Choose Employee Type
+            option(value='full-time') Full Time
+            option(value='part-time') Part Time
+            option(value='contract') Contract
+            option(value='sub-contract') Sub-contract
+        .form__group.ma-bt-md.form__group-add-supplier
+          label.add-supplier-label(for='employeeDOB') Employee DOB: 
+          input#newemployeeDOB.dateInput.form__input.form__input-supplier-add(type='date', placeholder='DOB')
+        .form__group.ma-bt-md.form__group-add-supplier
+          label.add-supplier-label(for='role') Role: 
+          input#newRole.form__input.form__input-supplier-add(type='text', placeholder='Role')
+        .form__group.ma-bt-md.form__group-add-supplier
+          label.add-supplier-label(for='department') Department: 
+          input#newdepartment.form__input.form__input-supplier-add(type='text', placeholder='department')
+        .form__group.ma-bt-md.form__group-add-supplier
+          label.add-supplier-label(for='joiningDate') Joining Date: 
+          input#newjoiningDate.dateInput.form__input.form__input-supplier-add(type='date', placeholder='joiningDate')          
+        .form__group.ma-bt-md.form__group-add-supplier
+          label.add-supplier-label(for='password') Password: 
+          input#newPassword.form__input.form__input-supplier-add(type='password', placeholder='••••••••', required)
+        .form__group.ma-bt-md.form__group-add-supplier
+          label.add-supplier-label(for='passwordConfirm') Password: 
+          input#newPasswordConfirm.form__input.form__input-supplier-add(type='password', placeholder='••••••••', required)
+        .form__group.form__group-add-supplier
+          button.btn.btn--green Sign Up Employee
+  

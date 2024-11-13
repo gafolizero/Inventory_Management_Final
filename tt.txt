@@ -1,0 +1,52 @@
+-----Test Users
+{
+    "name": "anish",
+    "email":"anish@anish.com",
+    "password":"anish1234",
+    "passwordConfirm":"anish1234"
+}
+{
+    "name": "apple",
+    "email":"apple@apple.com",
+    "password":"apple123",
+    "passwordConfirm":"apple123"
+}
+{
+    "name": "vhelvai",
+    "email":"vhelvai@vhelvai.com",
+    "password":"vhelvai123",
+    "passwordConfirm":"vhelvai123"
+}
+{
+  "name": "Testing",
+  "email":"testing@testing.com",
+  "password":"testing123",
+  "passwordConfirm":"testing123"
+}
+
+////////////////////////////
+
+{
+    "name": "Junga Bahadue Rana",
+    "email": "junga@gmail.com",
+    "employeeID": "thereisN0n",
+    "employeeType": "Full-Time",
+    "employeeDOB": "20-12-2012",
+    "role": "manager",
+    "department": "Sales",
+    "password": "junga123",
+    "passwordConfirm": "junga123"
+}
+,
+{
+    "name": "Vhel Vai Pokhari",
+    "email": "vhelPokhari@gmail.com",
+    "employeeID": "thereiswdfN0n",
+    "employeeType": "Full-Time",
+    "employeeDOB": "2000-12-20",
+    "role": "manager",
+    "department": "Sales",
+    "joiningDate": "2019-02-18",
+    "password": "pokhari123",
+    "passwordConfirm": "pokhari123"
+}

@@ -1,0 +1,36 @@
+[
+  {
+    "supplierName": "Acme Supplies",
+    "contactNumber": "1234567890",
+    "address": "123 Main St, City A, State A, 12345"
+  },
+  {
+    "supplierName": "Global Tech Solutions",
+    "contactNumber": "2345678901",
+    "address": "456 Elm St, City B, State B, 23456"
+  },
+  {
+    "supplierName": "Green Earth Products",
+    "contactNumber": "3456789012",
+    "address": "789 Oak St, City C, State C, 34567"
+  },
+  {
+    "supplierName": "Urban Craft Co.",
+    "contactNumber": "4567890123",
+    "address": "321 Pine St, City D, State D, 45678"
+  },
+  {
+    "supplierName": "Premium Materials Inc.",
+    "contactNumber": "5678901234",
+    "address": "654 Maple St, City E, State E, 56789"
+  },
+  {
+    "supplierID": "2024werewr",
+    "supplierName": "Mobile Production",
+    "address": "456 Elm St, City B, State B, 23456",
+    "speciality": "Mobile Phone",
+    "email": "mobileProduction@gmail.com",
+    "contactNumber": "1234567890",
+    "representative": "Hari Ram"
+  }
+]

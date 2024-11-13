@@ -1,0 +1,30 @@
+extends base
+
+block content
+  main.main
+    h2.heading-secondary.ma-bt-lg.add-supplier-heading=title
+    form.form-supplier
+      .arrange
+        .form__group.form__group-add-supplier
+          label.add-supplier-label(for='supplierName') Supplier Name: 
+          input#supplierName.form__input.form__input-supplier-add(type='text', placeholder='Supplier Name', required)
+        .form__group.form__group-add-supplier
+          label.add-supplier-label(for='supplierID') Supplier ID: 
+          input#supplierID.form__input.form__input-supplier-add(type='text', placeholder='Supplier ID', required)
+        .form__group.ma-bt-md.form__group-add-supplier
+          label.add-supplier-label(for='contactNumber') Contact Number: 
+          input#contactNumber.form__input.form__input-supplier-add(type='number', placeholder='Contact Number', required, minlength='12' maxlength='10')
+        .form__group.ma-bt-md.form__group-add-supplier
+          label.add-supplier-label(for='address') Address: 
+          input#address.form__input.form__input-supplier-add(type='text', placeholder='Address', required)
+        .form__group.ma-bt-md.form__group-add-supplier
+          label.add-supplier-label(for='representative') Representative: 
+          input#representative.form__input.form__input-supplier-add(type='text', placeholder='representative', required)
+        .form__group.ma-bt-md.form__group-add-supplier
+          label.add-supplier-label(for='email') Email: 
+          input#email.form__input.form__input-supplier-add(type='text', placeholder='email', required)
+        .form__group.ma-bt-md.form__group-add-supplier
+          label.add-supplier-label(for='speciality') Speciality: 
+          input#speciality.form__input.form__input-supplier-add(type='text', placeholder='speciality', required)
+        .form__group.form__group-add-supplier
+          button.btn.btn--green Add Supplier

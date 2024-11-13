@@ -1,0 +1,52 @@
+extends base
+
+block content 
+  main.main 
+    h2.heading-secondary.ma-bt-lg.add-supplier-heading=title
+    form.form-project
+      .arrange
+        .form__group.form__group-add-supplier
+          label.add-supplier-label(for='projectName') Project Name 
+          input#projectName.form__input.form__input-supplier-add(type='text', placeholder='Project Name', required)
+        .form__group.form__group-add-supplier
+          label.add-supplier-label(for='projectId') Project Id 
+          input#projectId.form__input.form__input-supplier-add(type='text', placeholder='Project Id', required) 
+        .form__group.form__group-add-supplier
+          label.add-supplier-label(for='address') Address 
+          input#address.form__input.form__input-supplier-add(type='text', placeholder='Address', required) 
+        .form__group.form__group-add-supplier
+          label.add-supplier-label(for='projectManagerId') Project Manager ID 
+          input#projectManagerId.form__input.form__input-supplier-add(type='text', placeholder='Project Manager Id', required)
+        .form__group.form__group-add-supplier
+          label.add-supplier-label(for='siteManagerId') Site Manager ID 
+          input#siteManagerId.form__input.form__input-supplier-add(type='text', placeholder='Site Manager Id', required)
+        .form__group.form__group-add-supplier
+          label.add-supplier-label.project-inventory-section(for='projectInv') Client Details 
+          .project-container-client
+            .client-div
+              .form__group.form__group-add-supplier
+              label.add-supplier-label.small-font(for='clientName') Client Name 
+              input#clientName.form__input.form__input-supplier-add(type='text', placeholder='Full Name', required)
+            .client-div
+              .form__group.form__group-add-supplier
+              label.add-supplier-label.small-font(for='clientNumber') Client Number
+              input#clientNumber.form__input.form__input-supplier-add(type='text', placeholder='1234567890', required)
+            .client-div
+              .form__group.form__group-add-supplier
+              label.add-supplier-label.small-font(for='clientType') Client Type 
+              input#clientType.form__input.form__input-supplier-add(type='text', placeholder='abc', required)  
+        .form__group.form__group-add-supplier
+          label.add-supplier-label.project-inventory-section(for='projectInv') Inventory 
+          .project-container
+            .project-Inv-qnt
+              .form__group.form__group-add-supplier
+                label.add-supplier-label.small-font(for='inventoryId') Inventory ID
+                input.inventoryId.form__input.form__input-supplier-add(type='text', placeholder='Inventory Id', required)
+              .form__group.form__group-add-supplier
+                label.add-supplier-label.small-font(for='inventoryQuantity') Inventory Quantity 
+                input.inventoryQuantity.form__input.form__input-supplier-add(type='text', placeholder='Inventory Quantity', required)
+            .project-inv-add-delete-sec 
+              button.btn.btn--green.project-inv-add Add Inventory
+              button.btn.btn--green.project-inv-delete Delete Inventory
+        .form__group.form__group-add-supplier
+          button.btn.btn--green.btn-add-project Add Project

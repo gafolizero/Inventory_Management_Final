@@ -1,0 +1,469 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Yatra+One&display=swap');
+
+:root {
+  --background-color: rgba(231, 232, 232, 255);
+  --border-color: rgba(231, 232, 232, 255);
+  --white: white;
+  --logo-color: rgba(0, 141, 143, 255);
+  --border-radius: 0.25rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+body {
+  background-color: rgba(24, 28, 33, 0.03);
+  color: #4e5155;
+  font-size: 0.8rem;
+}
+
+.sticky-nav {
+  margin-top: 0rem;
+  padding: 3rem;
+  position: sticky;
+  top: 0;
+  height: 3rem;
+  background-color: white;
+  z-index: 1;
+  width: 100%;
+  border-bottom: 1px solid rgba(14, 16, 19, 0.03);
+}
+
+.bold {
+  font-weight: bolder;
+  font-size: 1.8rem;
+  position: relative;
+  font-family: 'Yatra One', system-ui;
+  color: #000;
+}
+
+.header-nav {
+  display: flex;
+  height: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.after-scroll-sticky-nav-top {
+  padding: 2rem 0 2rem 0;
+  border-bottom: 2px solid var(--border-color);
+  transition: 0.4s;
+}
+
+.after-scroll-header-nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-right: 160;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.4s;
+}
+
+.nav-bar {
+  position: relative;
+  width: 40%;
+  font-size: 1rem;
+}
+
+.nav-bar-list {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+main,
+h1,
+p {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.center {
+  padding: 1rem 1rem 1rem 0rem;
+}
+
+h1 {
+  font-size: 2rem;
+  padding-bottom: 0rem;
+  margin-top: 1rem;
+}
+
+.form-cut-detail {
+  display: flex;
+  padding: 1rem 0rem 0rem 0;
+  justify-content: space-evenly;
+}
+.form-label-index {
+  padding-left: 0;
+}
+
+.cut-details {
+  background-color: white;
+  margin-bottom: 2rem;
+  padding: 1rem 0rem 2rem 0;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.trim-options {
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+  color: #4e5155;
+  padding-top: 1rem;
+}
+
+.stock-required-section {
+  background-color: white;
+  justify-content: space-evenly;
+  border: 1px solid rrgba(207, 205, 205, 0.356);
+  margin-bottom: 2rem;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.stock-required-header {
+  padding: 1.5rem 0rem 1.5rem 0rem;
+}
+
+.stock-required-title {
+  position: relative;
+  left: 1rem;
+  font-weight: bold;
+}
+
+.form-label {
+  padding: 0.5rem;
+}
+
+input {
+  padding: 0.3 rem;
+  border: 1px solid rgba(220, 218, 218, 0.621);
+}
+
+.section-header {
+  padding: 1rem 1rem 1rem 0rem;
+  border-bottom: 1px solid rgba(207, 205, 205, 0.356);
+}
+
+table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+.stock-last-row {
+  padding: 1rem 0 1rem 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.stock-last-row-btn {
+  position: relative;
+  right: 11rem;
+}
+
+.required-last-row {
+  padding: 1rem 0 1rem 0;
+  position: relative;
+  left: 47.3rem;
+  width: 15%;
+}
+
+.last-btn {
+  position: relative;
+  left: 16rem;
+}
+
+.about-section {
+  padding: 3rem 0rem 1rem 0rem;
+}
+
+.last-section {
+  margin-top: 1rem;
+  border: 2px solid red;
+}
+
+footer {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.last-nav {
+  margin-top: 2rem;
+  background-color: white;
+  padding: 1rem;
+}
+
+.bold-last {
+  font-weight: bold;
+  font-size: 1.5rem;
+  position: relative;
+  /* left: 9rem; */
+  font-family: 'Yatra One', system-ui;
+  color: #000;
+}
+
+thead {
+  background-color: rgba(207, 205, 205, 0.356);
+  border: none;
+}
+
+.form-label {
+  padding: 1rem;
+}
+
+td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(207, 205, 205, 0.356);
+}
+
+.btn {
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  padding: 5px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 6px;
+  color: #24292e;
+  background-color: #fafbfc;
+  border-color: #1b1f2326;
+  box-shadow:
+    rgba(27, 31, 35, 0.04) 0px 1px 0px 0px,
+    rgba(255, 255, 255, 0.25) 0px 1px 0px 0px inset;
+  transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  transition-property: color, background-color, border-color;
+}
+
+.btn:hover {
+  background-color: var(--logo-color);
+  border-color: #1b1f2326;
+  transition-duration: 0.1s;
+  color: white;
+}
+
+.sign-up-btn {
+  align-items: center;
+  appearance: none;
+  background: var(--logo-color);
+
+  border-radius: 24px;
+  border-style: none;
+
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  fill: currentcolor;
+  font-family: 'Google Sans', Roboto, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  justify-content: center;
+  letter-spacing: 0.25px;
+  line-height: normal;
+  max-width: 100%;
+  overflow: visible;
+  padding: 2px 24px;
+  position: relative;
+  bottom: 8px;
+  text-align: center;
+  text-transform: none;
+  transition:
+    box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 15ms linear 30ms,
+    transform 270ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform, opacity;
+  z-index: 0;
+}
+
+.sign-up-btn:hover {
+  filter: brightness(1.1);
+  color: white;
+}
+
+/* .sign-up-btn {
+  border: none;
+  background-color: var(--logo-color);
+  color: #ffffff;
+  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+  position: relative;
+  top: -3px;
+  border-radius: 50%;
+} */
+
+.calculate-btn {
+  background-color: var(--logo-color);
+}
+
+.delete-btn {
+  border: 1px solid red;
+  color: red;
+}
+
+.delete-btn:hover {
+  background-color: red;
+  color: white;
+}
+
+.delete-bold {
+  font-weight: bolder;
+}
+
+.add-button {
+  border: 1px solid var(--logo-color);
+  color: var(--logo-color);
+}
+
+.feedback-btn:hover {
+  background-color: #4e5155;
+}
+
+/* .add-btn-stock.info-button-stock {
+  position: relative;
+  left: 10rem;
+} */
+
+footer {
+  background-color: white;
+}
+
+.switch {
+  font-size: 12px;
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 1;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  background: #fff;
+  transition: 0.4s;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 1.9em;
+  width: 1.9em;
+  border-radius: 16px;
+  left: 1.2px;
+  top: 0.799px;
+  bottom: 0;
+  background-color: white;
+  box-shadow: 0 2px 5px #999999;
+  transition: 0.2s;
+}
+
+input:checked + .slider {
+  background-color: rgba(0, 141, 143, 255);
+  border: 1px solid transparent;
+}
+
+input:checked + .slider:before {
+  transform: translateX(1.6em);
+}
+
+.label-g {
+  font-weight: bold;
+  color: #4e5155;
+}
+
+.para-class {
+  line-height: 1.6;
+  font-size: 1rem;
+  text-align: justify;
+}
+
+select {
+  font-weight: inherit;
+  padding: 0.2rem;
+  border: inherit;
+  font: inherit;
+}
+
+input {
+  font: inherit;
+  color: inherit;
+}
+
+.import-metric {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.import-btn,
+.metric-btn {
+  position: relative;
+  margin: 1rem;
+  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+  border-color: var(--logo-color);
+  color: var(--logo-color);
+}
+
+option {
+  font: inherit;
+}
+
+/*!Doesnot work
+*/
+/*
+ input[type="number"]:focus, select:focus {
+  border-color: var(--logo-color);
+} */
+
+.display-none {
+  display: none;
+}
+
+select {
+  border: none;
+  border: 1px solid var(--background-color);
+}
+
+input:hover,
+select:hover {
+  outline: none;
+  border: 1px solid var(--logo-color);
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border: 1.8px solid var(--logo-color);
+}

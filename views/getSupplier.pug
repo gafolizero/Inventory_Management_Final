@@ -1,0 +1,95 @@
+//- extend base
+ 
+//- block content 
+//-   main 
+//-     .flex-container-supplier
+//-       .supplier-info-container.flex-supplier-container
+//-         h2.add-supplier-info-heading= supplier.supplierName
+//-         p 
+//-           <span class='supp-info'> Supplier Id </span>#{supplier.supplierID} 
+//-         p 
+//-           <span class='supp-info'> Contact Number </span>#{supplier.contactNumber}
+//-         p 
+//-           <span class='supp-info'> Address </span>#{supplier.address}
+//-         p 
+//-           <span class='supp-info'> Speciality  </span>#{supplier.speciality}
+//-         p 
+//-           <span class='supp-info'> Email  </span>#{supplier.email}
+//-         p 
+//-           <span class='supp-info'> Representative  </span>#{supplier.representative}
+//-         p 
+//-           <span class='supp-info'> Added By  </span>#{supplier.addedBy && supplier.addedBy.length > 0 ? supplier.addedBy[0].name : 'N/A'}
+//-         p  
+//-           - const formattedDate = new Date(supplier.addedOn).toDateString() 
+//-           <span class='supp-info'> Added On</span> #{formattedDate}
+//-       .supplier-inventory-info-container.flex-supplier-container
+//-         h2  Inventory Supplied 
+//-         table.get-supplier-table
+//-           thead 
+//-             tr.tr-head
+//-               th Inventory ID 
+//-               th Material 
+//-               th Added By 
+//-               th Details 
+//-           tbody 
+//-             each inventory in supplier.inventoriesSupplied
+//-               tr
+//-                 td= inventory.inventoryID
+//-                 td= inventory.material 
+//-                 td= inventory.addedBy[0].name 
+//-                 td
+//-                   button.btn.btn--green(onclick=`location.href='http://127.0.0.1:8000/inventory/${inventory.id}'`) Details
+
+extends base
+
+block content
+  main
+    .flex-container-supplier
+      .supplier-info-container.flex-supplier-container
+        h2.add-supplier-info-heading= supplier.supplierName
+        p 
+          <span class='supp-info'> Supplier Id: </span> #{supplier.supplierID}
+        p 
+          <span class='supp-info'> Contact Number: </span> #{supplier.contactNumber || 'N/A'}
+        p 
+          <span class='supp-info'> Address: </span> #{supplier.address || 'N/A'}
+        p 
+          <span class='supp-info'> Speciality: </span> #{supplier.speciality || 'N/A'}
+        p 
+          <span class='supp-info'> Email: </span> #{supplier.email || 'N/A'}
+        p 
+          <span class='supp-info'> Representative: </span> #{supplier.representative || 'N/A'}
+        p 
+          <span class='supp-info'> Added By: </span> 
+          #{supplier.addedBy && supplier.addedBy.length > 0 ? supplier.addedBy[0].name : 'N/A'}
+        p  
+          - const formattedDate = new Date(supplier.addedOn).toDateString()
+          <span class='supp-info'> Added On: </span> #{formattedDate}
+
+      // Supplier Inventory Section
+      .supplier-inventory-info-container.flex-supplier-container
+        h2 Inventory Supplied
+        // Show a loading state if inventories are not yet available
+        if !supplier.inventoriesSupplied || supplier.inventoriesSupplied.length === 0
+          p No inventory supplied yet.
+        else
+          table.get-supplier-table
+            thead
+              tr.tr-head
+                th Inventory ID
+                th Material
+                th Added By
+                th Details
+            tbody
+              each inventory in supplier.inventoriesSupplied
+                tr
+                  td= inventory.inventoryID
+                  td= inventory.material
+                  td= inventory.addedBy[0].name
+                  td
+                    // Adding a tooltip for button functionality
+                    button.btn.btn--green(
+                      onclick=`location.href='http://127.0.0.1:8000/inventory/${inventory.id}'`
+                      aria-label="View details of inventory #{inventory.inventoryID}"
+                      title="Click to view more details about this inventory"
+                    ) Details

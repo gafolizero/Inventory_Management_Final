@@ -1,0 +1,31 @@
+extends base
+
+block content
+  main.main
+    h2.add-supplier-heading All Users
+    table
+      thead
+        tr.tr-head
+          th User ID
+          th Name
+          th Email
+          th Role
+          th Department
+          th Joining Date
+          th Delete User
+          th Update User
+      tbody.unload-event-click
+        each user in allUsers 
+          tr
+            td.user-material= user.employeeID
+            td.user-material= user.name
+            td.user-id= user.email
+            td.user-role= user.role
+            td.user-department= user.department
+            - const formattedDate=new Date(user.joiningDate).toDateString()
+            td.user-joiningDate= formattedDate
+            td.user-thickness <button class='btn btn--green'>Delete</button>
+            td.user-thickness <button class='btn btn--green'>Update</button>
+      
+
+

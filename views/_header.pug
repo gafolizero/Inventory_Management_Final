@@ -1,0 +1,93 @@
+.sticky-nav.sticky-nav-top
+  nav.header-nav 
+    .appName 
+      span.bold: a(href='/') 
+                  img(src='/images/trackoala_logo_header.png' width='268px' height='72px')
+    .nav-bar 
+      ul.nav-bar-list 
+        if user
+          a.nav__el(href='/me')
+            i.bx.bxs-user-circle.user-icon
+            span.user-name=user.name.split(' ')[0]
+        else
+          li: button.btn.sign-up-btn.login-in-btn: a(href='/login') Log In
+//-  457x123
+if user
+  .sidebar
+    .top
+      i.bx.bx-menu.btn--space.open-sidebar#btn
+
+    ul.sidebar--ul
+      li.dropdown
+        a(href="#", class="dropdown-toggle")
+          i.bx.bx-coin-stack.open-sidebar
+          span.nav-item Inventory
+        ul.dropdown
+          li
+            a(href="/inventory/addInventory")
+              span.nav-item Add Inventory
+          li
+            a(href="/inventory/getAll")
+              span.nav-item Inventory List
+
+      li.dropdown
+        a(href="#", class="dropdown-toggle")
+          i.bx.bx-building-house.open-sidebar
+          span.nav-item Supplier
+        ul.dropdown.dropdown-in
+          if user.role==='admin' || user.role==='manager'
+            li
+              a(href="/supplier/addsupplier")
+                span.nav-item Add Supplier
+          li
+            a(href="/supplier/getAllSuppliers")
+              span.nav-item Supplier List
+
+      li.dropdown
+        a(href="#", class="dropdown-toggle")
+          i.bx.bx-clipboard.open-sidebar
+          span.nav-item Project
+        ul.dropdown
+          if user.role==='admin' || user.role==='manager'
+            li
+              a(href="/project/addProject")
+                span.nav-item Add Project
+          li
+            a(href="/project/getAllProject")
+              span.nav-item View Projects
+
+      li
+        a(href="#")
+          i.bx.bx-line-chart.open-sidebar
+          span.nav-item Estimate
+            i.bx.bxs-crown.premium-tag
+
+      li
+        a(href="#")
+          i.bx.bx-package.open-sidebar
+          span.nav-item Delivery
+            i.bx.bxs-crown.premium-tag
+
+      li
+        a(href="#")
+          i.bx.bx-body.open-sidebar
+          span.nav-item Fabrication
+            i.bx.bxs-crown.premium-tag
+
+      li
+        a(href="#")
+          i.bx.bx-pencil.open-sidebar
+          span.nav-item Drawings
+            i.bx.bxs-crown.premium-tag
+      
+      li 
+        a(href="#")
+          i.bx.bxs-truck.open-sidebar
+          span.nav-item.no-padding Material_Order
+            i.bx.bxs-crown.premium-tag
+
+      li 
+        a(href="/history")
+          i.bx.bx-history.open-sidebar
+          span.nav-item.no-padding Check_Activity   
+      .lastone

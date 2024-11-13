@@ -1,0 +1,31 @@
+extend base
+
+block content 
+  main 
+    h2.add-supplier-heading Project List
+    table
+      thead.tr-head-getAll
+        tr.tr-head
+          th S.No
+          th Project ID
+          th Project Name
+          th Project Manager
+          th Site Manager
+          th Inventories Used
+          th Client
+          th Details
+          
+      tbody
+        each project,i in allProject 
+          tr
+            td=`${i+1}`
+            td=project.projectID
+            td=project.name
+            td=project.projectManager[0].name
+            td=project.siteManager[0].name
+            td=project.inventory.length 
+            td=project.client.clientName
+            td
+              button.btn.btn--green(onclick=`location.href='http://127.0.0.1:8000/project/${project.projectID}'`) Details
+            
+        //-   tr(ondblclick=`location.href='http://127.0.0.1:8000/supplier/${supplier.slug}'`)

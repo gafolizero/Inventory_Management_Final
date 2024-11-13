@@ -1,0 +1,36 @@
+extend base 
+
+block content 
+  main 
+    h2.add-supplier-heading(id='top') History
+    section
+      table.history
+        thead
+          tr.tr-head
+            th Date
+            th Modified
+            th Action Taken
+            th Modified Item
+            th Modified Item ID
+            th Unload Quantity
+            th Modified By
+
+        tbody
+          each history in allHistory
+            tr 
+              - const formattedDate = new Date(history.date).toDateString()
+              td= formattedDate
+              td= history.modified
+              td= history.action
+              td= history.modifiedName
+              td= history.itemID
+              td.unloadCountTable= history.unloadCount
+              td #{history.user}, #{history.userID}
+
+
+
+
+
+
+
+

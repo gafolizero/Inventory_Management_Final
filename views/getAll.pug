@@ -1,0 +1,100 @@
+extend base
+
+block content 
+  main 
+    h2.add-supplier-heading(id='top') All the Inventory
+    h2 Filter 
+    form.filter-form.all-inventory-filter
+      .filter-box-container
+        .filter-box
+          label.filer-label Material Name
+          input.filter-input#materialFilter(type="text")
+        .filter-box
+          label.filer-label Supplier ID
+          input.filter-input#supplierFilter(type="text")
+        .filter-box
+          label.filer-label Thickness 
+          input.filter-input#thicknessFilter(type="text")
+        .filter-box
+          button.btn.btn--green.btn-filter Filter
+    form.unload-material-form.hide__content
+      .filter-box-container-unload-top
+        h2.unload-form-heading Selected For Unload
+        button.close-unload-button.btn.delete-btn X 
+      .filter-box-container-unload
+        h2 Material Selected: 
+          <span class='material-unload-name'>Wood</span>
+        h2 Material ID: 
+          <span class='material-unload-id'>2342t34gf324521688</span>
+        h2 Supplier: 
+          <span class='material-unload-supplier'>Univeral Studio</span>
+        h2 Material Availabe: 
+          <span class='material-unload-available'>12</span>
+      .filter-box
+        label.filer-label <h3 class='unload-heading'>Material Unload Count</h3>:
+        input.filter-unload#materialUnload(type="number")
+      button.btn.btn--green.btn-unload Unload
+    table.inventory-table.table-for-history-inv
+      thead.tr-head-getAll
+        tr.tr-head
+          th Material
+          th Material ID
+          th Supplier
+          th Thickness
+          th Quantity
+          th Length
+          th Width
+          th Finish
+          th Grain
+          th Unload
+          th History
+          th Details
+      tbody.unload-event-click
+        each inventory in allInventory
+          tr
+            td.inventory-material= inventory.material || 'No Material'
+            td.inventory-id= inventory.inventoryID || 'No ID'
+            td.inventory-supplier= inventory.supplier && inventory.supplier.length > 0 ? inventory.supplier[0].supplierName : 'Supplier Not Found'
+            td.inventory-thickness= inventory.thickness || 'No Thickness'
+            td.inventory-quantity= inventory.quantity || 'No Quantity'
+            td.inventory-length= inventory.length || 'No Length'
+            td.inventory-width= inventory.width || 'No Width'
+            td.inventory-finish= inventory.finish || 'No Finish'
+            td.inventory-grain= inventory.grain || 'No Grain'
+            td
+              button.btn.btn--green.btn-unload(onclick="window.scrollTo({ top: 0, behavior: 'smooth' })") Unload
+            td 
+              button.btn.btn--green.btn-checkHistory Check History 
+            td
+              button.btn.btn--green(onclick=`location.href='http://127.0.0.1:8000/inventory/${inventory.id}'`) Details
+
+             
+          tr.hide__content 
+            td.check-history-in-table(colspan="12")
+              .div-history
+                section
+                  h3.history-title History
+                  table.history 
+                    thead
+                      tr.tr-head
+                        th Date
+                        th Modified
+                        th Action Taken
+                        th Modified Item
+                        th Modified Item ID
+                        th Unload Quantity
+                        th Modified By
+
+                    tbody.history-inv-body
+                      //- each history in allHistory
+                      //-   tr 
+                      //-     td.data= history.date
+                      //-     td.modified= history.modified
+                      //-     td.action= history.action
+                      //-     td.modifiedName= history.modifiedName
+                      //-     td.modifiedID= history.modifiedID
+                      //-     td.unloadCountTable= history.unloadCount
+                      //-     td.historyUser #{history.user}, #{history.userID}
+                    
+    //- include _history
+    //- section.history-section

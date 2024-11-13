@@ -1,0 +1,51 @@
+extends base
+
+block content
+  main
+    .flex-container-supplier
+      .supplier-info-container.flex-supplier-container
+        h2.add-supplier-info-heading= project.name
+        p 
+          <span class='supp-info'> Project Name </span>#{project.name}
+        p
+          <span class='supp-info'> Project ID </span>#{project.projectID}
+        p
+          <span class='supp-info'> Address </span>#{project.address}
+        p
+          <span class='supp-info'> Project Manager </span>
+            p &nbsp; <span class='supp-info'>Project Manager</span> #{project.projectManager[0] ? project.projectManager[0].name : 'N/A'}
+            p &nbsp; <span class='supp-info'>Project Manager ID</span> #{project.projectManager[0] ? project.projectManager[0].employeeID : 'N/A'}
+        p
+          <span class='supp-info'> Site Manager </span>
+            p &nbsp; <span class='supp-info'>Site Manager</span> #{project.siteManager[0] ? project.siteManager[0].name : 'N/A'}
+            p &nbsp; <span class='supp-info'>Site Manager ID</span> #{project.siteManager[0] ? project.siteManager[0].employeeID : 'N/A'}
+        p
+          <span class='supp-info'> Client Detail </span>
+            p &nbsp; <span class='supp-info'>Name</span> #{project.client ? project.client.clientName : 'N/A'}
+            p &nbsp; <span class='supp-info'>Number</span> #{project.client ? project.client.clientNumber : 'N/A'}
+            p &nbsp; <span class='supp-info'>Type</span> #{project.client ? project.client.clientType : 'N/A'}
+
+      .supplier-inventory-info-container.flex-supplier-container
+        h2 Inventory Required
+        table.get-supplier-table
+          thead
+            tr.tr-head
+              th Inventory ID
+              th Material
+              th Required Quantity
+              th Details
+          tbody
+            each inventory in project.inventory
+              if inventory && inventory.inventoryItemId && inventory.inventoryItemId.inventoryID
+                tr
+                  td= inventory.inventoryItemId.inventoryID
+                  td= inventory.inventoryItemId.material
+                  td= inventory.inventoryquantity
+                  td
+                    button.btn.btn--green(onclick=`location.href='/inventory/${inventory.inventoryItemId._id}'`) Details
+              else
+                tr
+                  td N/A
+                  td N/A
+                  td N/A
+                  td N/A
